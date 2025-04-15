@@ -1,0 +1,162 @@
+/* Basic Reset & Font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container */
+.calculator-container {
+    max-width: 700px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+header h1 {
+    color: #a0522d;
+    /* Sienna brown */
+    margin-bottom: 5px;
+}
+
+/* Sections */
+.inputs,
+.results {
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #a0522d;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically align items */
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+}
+
+.input-group label {
+    flex-basis: 250px;
+    /* Fixed width for labels */
+    margin-right: 10px;
+    /* Space between label and input */
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="number"] {
+    flex-grow: 1;
+    /* Allow input to take remaining space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    min-width: 100px;
+    /* Minimum width for input */
+}
+
+.input-group input[type="number"]:disabled {
+    background-color: #e9e9e9;
+    cursor: not-allowed;
+}
+
+/* Radio Buttons */
+.units {
+    align-items: flex-start;
+    /* Align radio labels to the top */
+}
+
+.units label {
+    flex-basis: 250px;
+    /* Same width as other labels */
+}
+
+.units label:not(:first-of-type) {
+    /* Style radio options */
+    flex-basis: auto;
+    /* Let radio labels take auto width */
+    font-weight: normal;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.units input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+    /* Align radio button with text */
+}
+
+
+/* Results Section */
+.results h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.results p {
+    margin-bottom: 8px;
+    background-color: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.results span {
+    /* Style all value/unit spans */
+    font-weight: bold;
+}
+
+.result-category hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
+/* Unit Visibility Control */
+.metric-val,
+.metric-unit,
+.imperial-val,
+.imperial-unit,
+.separator {
+    display: none;
+    /* Hide all by default */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}

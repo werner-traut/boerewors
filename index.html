@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Easily calculate boerewors spices (salt, coriander, cloves, etc.) and meat percentages based on total weight. Supports metric and imperial units.">
+    <title>Boerewors Recipe & Spice Calculator (Metric/Imperial)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <header>
+            <h1>Boerewors Recipe Calculator</h1>
+            <p>Calculate your ingredients based on the total weight of your meat mixture.</p>
+        </header>
+
+        <section class="inputs">
+            <h2>Inputs</h2>
+            <div class="input-group">
+                <label for="totalWeight">Total Meat Mixture Weight (kg):</label>
+                <input type="number" id="totalWeight" value="4.5" step="0.1" min="0.1">
+            </div>
+            <div class="input-group">
+                <label for="beefPercent">Beef Percentage of Lean Meat (%):</label>
+                <input type="number" id="beefPercent" value="70" step="1" min="0" max="100">
+            </div>
+            <div class="input-group">
+                <label for="porkPercent">Pork Percentage of Lean Meat (%):</label>
+                <input type="number" id="porkPercent" value="30" step="1" min="0" max="100" disabled> 
+                </div>
+             <div class="input-group">
+                <label for="fatPercent">Fat Percentage of Total Mixture (%):</label>
+                <input type="number" id="fatPercent" value="30" step="1" min="0" max="80"> 
+                </div>
+            <div class="input-group units">
+                <label>Display Units:</label>
+                <label><input type="radio" name="units" value="metric" checked> Metric</label>
+                <label><input type="radio" name="units" value="imperial"> Imperial</label>
+                <label><input type="radio" name="units" value="both"> Both</label>
+            </div>
+        </section>
+
+        <section class="results">
+            <h2>Calculated Ingredients</h2>
+            
+            <div class="result-category">
+                <h3>Meat Composition:</h3>
+                <p>Beef: <span id="beef-kg" class="metric-val"></span><span class="metric-unit"> kg</span> <span class="separator"> / </span> <span id="beef-lb" class="imperial-val"></span><span class="imperial-unit"> lbs</span></p>
+                <p>Pork: <span id="pork-kg" class="metric-val"></span><span class="metric-unit"> kg</span> <span class="separator"> / </span> <span id="pork-lb" class="imperial-val"></span><span class="imperial-unit"> lbs</span></p>
+                <p>Fat: <span id="fat-kg" class="metric-val"></span><span class="metric-unit"> kg</span> <span class="separator"> / </span> <span id="fat-lb" class="imperial-val"></span><span class="imperial-unit"> lbs</span></p>
+                 <p><strong>Total Lean Meat:</strong> <span id="lean-kg" class="metric-val"></span><span class="metric-unit"> kg</span> <span class="separator"> / </span> <span id="lean-lb" class="imperial-val"></span><span class="imperial-unit"> lbs</span></p>
+                 <p><strong>Total Mixture:</strong> <span id="total-kg" class="metric-val"></span><span class="metric-unit"> kg</span> <span class="separator"> / </span> <span id="total-lb" class="imperial-val"></span><span class="imperial-unit"> lbs</span></p>
+            </div>
+
+            <div class="result-category">
+                <h3>Spices & Liquids:</h3>
+                <p>Salt: <span id="salt-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="salt-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <p>Coriander: <span id="coriander-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="coriander-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <p>Nutmeg: <span id="nutmeg-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="nutmeg-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <p>Ground Cloves: <span id="cloves-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="cloves-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <p>Black Pepper: <span id="pepper-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="pepper-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <p>Rosemary: <span id="rosemary-g" class="metric-val"></span><span class="metric-unit"> g</span> <span class="separator"> / </span> <span id="rosemary-oz" class="imperial-val"></span><span class="imperial-unit"> oz</span></p>
+                <hr> 
+                <p>Brown Vinegar: <span id="vinegar-ml" class="metric-val"></span><span class="metric-unit"> ml</span> <span class="separator"> / </span> <span id="vinegar-floz" class="imperial-val"></span><span class="imperial-unit"> fl oz</span></p>
+                <p>Worcestershire Sauce: <span id="worcester-ml" class="metric-val"></span><span class="metric-unit"> ml</span> <span class="separator"> / </span> <span id="worcester-floz" class="imperial-val"></span><span class="imperial-unit"> fl oz</span></p>
+                <p>Water: <span id="water-ml" class="metric-val"></span><span class="metric-unit"> ml</span> <span class="separator"> / </span> <span id="water-floz" class="imperial-val"></span><span class="imperial-unit"> fl oz</span></p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Base recipe adapted for 4.5kg total mixture.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
