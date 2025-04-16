@@ -160,3 +160,35 @@ footer {
     border-top: 1px solid #eee;
     padding-top: 15px;
 }
+
+/* Optional CSS for the video */
+.video-section {
+    margin-top: 30px;
+    text-align: center;
+    /* Center heading */
+}
+
+.video-section h2 {
+    margin-bottom: 15px;
+    /* Add space below heading */
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-bottom: 20px;
+    /* Add space below video */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
